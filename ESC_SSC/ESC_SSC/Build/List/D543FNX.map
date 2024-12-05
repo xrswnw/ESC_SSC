@@ -1,0 +1,353 @@
+###############################################################################
+#
+# IAR ELF Linker V8.40.1.212/W32 for ARM                  05/Dec/2024  10:07:28
+# Copyright 2007-2019 IAR Systems AB.
+#
+#    Output file  =  E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Exe\D543FNX.out
+#    Map file     =
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\List\D543FNX.map
+#    Command line =
+#        -f C:\Users\swnw\AppData\Local\Temp\EW4A0B.tmp
+#        (E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\AnyID_Des.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\AnyID_FRam.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\AnyID_R542_FRam.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\AnyID_R542_FRam_HL.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\AnyID_R542_Reader.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\AnyID_R542_SysCfg.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\AnyID_R542_SysTick_HL.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\AnyID_R542_WDG_HL.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\AnyID_Stdlib.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\AnyID_SysTick.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\AnyID_Uart_Receive.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\main.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\misc.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\startup_stm32f427x.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_adc.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_cryp.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_cryp_des.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_dma.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_exti.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_flash.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_gpio.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_it.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_iwdg.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_pwr.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_rcc.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_spi.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_syscfg.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_tim.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\stm32f4xx_usart.o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj\system_stm32f4xx.o
+#        --no_out_extension -o
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Exe\D543FNX.out --map
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\List\D543FNX.map --config
+#        E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\stm32f4xx_flash.icf --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'4000 { ro section .intvec };
+"P1":  place in [from 0x800'4000 to 0x80f'ffff] { ro };
+define block CSTACK with size = 16K, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2001'ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x1ac
+  .intvec            ro code   0x800'4000   0x1ac  startup_stm32f427x.o [1]
+                             - 0x800'41ac   0x1ac
+
+"P1":                                       0x66c
+  .text              ro code   0x800'41ac   0x174  AnyID_R542_SysCfg.o [1]
+  .text              ro code   0x800'4320    0x80  stm32f4xx_rcc.o [1]
+  .text              ro code   0x800'43a0    0xa4  AnyID_R542_SysTick_HL.o [1]
+  .text              ro code   0x800'4444    0x24  misc.o [1]
+  .text              ro code   0x800'4468   0x124  system_stm32f4xx.o [1]
+  .text              ro code   0x800'458c    0x2e  copy_init3.o [4]
+  .text              ro code   0x800'45bc    0x28  data_init.o [4]
+  .text              ro code   0x800'45e4    0x22  fpinit_M.o [3]
+  .iar.init_table    const     0x800'4608    0x14  - Linker created -
+  .text              ro code   0x800'461c    0x20  stm32f4xx_it.o [1]
+  .text              ro code   0x800'463c    0x1e  cmain.o [4]
+  .text              ro code   0x800'465a     0x4  low_level_init.o [2]
+  .text              ro code   0x800'465e     0x8  main.o [1]
+  .text              ro code   0x800'4666     0x4  exit.o [2]
+  .text              ro code   0x800'466c     0xa  cexit.o [4]
+  .text              ro code   0x800'4678    0x14  exit.o [5]
+  .text              ro code   0x800'468c    0x10  startup_stm32f427x.o [1]
+  .text              ro code   0x800'469c     0xc  cstartup_M.o [4]
+  Initializer bytes  const     0x800'46a8     0xc  <for P2-1>
+  .text              ro code   0x800'46b4     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46b8     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46bc     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46c0     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46c4     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46c8     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46cc     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46d0     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46d4     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46d8     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46dc     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46e0     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46e4     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46e8     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46ec     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46f0     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46f4     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46f8     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'46fc     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4700     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4704     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4708     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'470c     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4710     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4714     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4718     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'471c     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4720     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4724     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4728     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'472c     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4730     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4734     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4738     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'473c     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4740     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4744     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4748     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'474c     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4750     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4754     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4758     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'475c     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4760     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4764     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4768     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'476c     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4770     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4774     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4778     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'477c     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4780     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4784     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4788     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'478c     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4790     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4794     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4798     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'479c     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47a0     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47a4     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47a8     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47ac     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47b0     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47b4     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47b8     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47bc     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47c0     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47c4     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47c8     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47cc     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47d0     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47d4     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47d8     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47dc     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47e0     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47e4     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47e8     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47ec     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47f0     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47f4     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47f8     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'47fc     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4800     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4804     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4808     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'480c     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4810     0x4  startup_stm32f427x.o [1]
+  .text              ro code   0x800'4814     0x4  startup_stm32f427x.o [1]
+  .rodata            const     0x800'4818     0x0  copy_init3.o [4]
+                             - 0x800'4818   0x66c
+
+"P2", part 1 of 2:                            0xc
+  P2-1                        0x2000'0000     0xc  <Init block>
+    .data            inited   0x2000'0000     0x4  AnyID_R542_SysCfg.o [1]
+    .bss             inited   0x2000'0004     0x4  AnyID_R542_SysTick_HL.o [1]
+    .bss             inited   0x2000'0008     0x4  AnyID_R542_SysTick_HL.o [1]
+                            - 0x2000'000c     0xc
+
+"P2", part 2 of 2:                         0x4000
+  CSTACK                      0x2000'0010  0x4000  <Block>
+    CSTACK           uninit   0x2000'0010  0x4000  <Block tail>
+                            - 0x2000'4010  0x4000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'4818   0x80f'ffff  0xf'b7e8
+  0x2000'000c  0x2000'000f       0x4
+  0x2000'4010  0x2001'ffff  0x1'bff0
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0xc:
+           0x800'46a8   0xc
+    1 destination range, total size 0xc:
+          0x2000'0000   0xc
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                   ro code  ro data  rw data
+    ------                   -------  -------  -------
+command line/config:
+    --------------------------------------------------
+    Total:
+
+E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj: [1]
+    AnyID_R542_SysCfg.o          372        4        4
+    AnyID_R542_SysTick_HL.o      164        8        8
+    main.o                         8
+    misc.o                        36
+    startup_stm32f427x.o         800
+    stm32f4xx_it.o                32
+    stm32f4xx_rcc.o              128
+    system_stm32f4xx.o           292
+    --------------------------------------------------
+    Total:                     1'832       12       12
+
+dl7M_tlf.a: [2]
+    exit.o                         4
+    low_level_init.o               4
+    --------------------------------------------------
+    Total:                         8
+
+m7M_tls.a: [3]
+    fpinit_M.o                    34
+    --------------------------------------------------
+    Total:                        34
+
+rt7M_tl.a: [4]
+    cexit.o                       10
+    cmain.o                       30
+    copy_init3.o                  46
+    cstartup_M.o                  12
+    data_init.o                   40
+    --------------------------------------------------
+    Total:                       138
+
+shb_l.a: [5]
+    exit.o                        20
+    --------------------------------------------------
+    Total:                        20
+
+    Gaps                           6        2
+    Linker created                         20   16'384
+------------------------------------------------------
+    Grand Total:               2'038       34   16'396
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address  Size  Type      Object
+-----                       -------  ----  ----      ------
+.iar.init_table$$Base    0x800'4608         --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'461c         --   Gb  - Linker created -
+?main                    0x800'463d        Code  Gb  cmain.o [4]
+BusFault_Handler         0x800'4623   0x2  Code  Gb  stm32f4xx_it.o [1]
+CSTACK$$Base            0x2000'0010         --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'4010         --   Gb  - Linker created -
+DebugMon_Handler         0x800'4629   0x2  Code  Gb  stm32f4xx_it.o [1]
+HardFault_Handler        0x800'461f   0x2  Code  Gb  stm32f4xx_it.o [1]
+MemManage_Handler        0x800'4621   0x2  Code  Gb  stm32f4xx_it.o [1]
+NMI_Handler              0x800'461d   0x2  Code  Gb  stm32f4xx_it.o [1]
+NVIC_SetPriority         0x800'43a1  0x2c  Code  Lc  AnyID_R542_SysTick_HL.o [1]
+PendSV_Handler           0x800'462b   0x2  Code  Gb  stm32f4xx_it.o [1]
+RCC_AHB1PeriphClockCmd   0x800'4321  0x1c  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_AHB2PeriphClockCmd   0x800'433d  0x1c  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_APB1PeriphClockCmd   0x800'4359  0x1c  Code  Gb  stm32f4xx_rcc.o [1]
+RCC_APB2PeriphClockCmd   0x800'4375  0x1c  Code  Gb  stm32f4xx_rcc.o [1]
+Region$$Table$$Base      0x800'4608         --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'461c         --   Gb  - Linker created -
+STick_InitSysTick        0x800'43fd  0x26  Code  Gb  AnyID_R542_SysTick_HL.o [1]
+SVC_Handler              0x800'4627   0x2  Code  Gb  stm32f4xx_it.o [1]
+SetSysClock              0x800'44ad  0xaa  Code  Lc  system_stm32f4xx.o [1]
+SysTick_CLKSourceConfig
+                         0x800'4445  0x1c  Code  Gb  misc.o [1]
+SysTick_Config           0x800'43cd  0x30  Code  Lc  AnyID_R542_SysTick_HL.o [1]
+SysTick_Handler          0x800'462d   0xa  Code  Gb  stm32f4xx_it.o [1]
+Sys_CfgClock             0x800'41bf  0xcc  Code  Gb  AnyID_R542_SysCfg.o [1]
+Sys_CfgNVIC              0x800'42b5   0x8  Code  Gb  AnyID_R542_SysCfg.o [1]
+Sys_CfgPeriphClk         0x800'428b  0x2a  Code  Gb  AnyID_R542_SysCfg.o [1]
+Sys_Delayms              0x800'41ad  0x12  Code  Gb  AnyID_R542_SysCfg.o [1]
+Sys_Init                 0x800'42bd  0x26  Code  Gb  AnyID_R542_SysCfg.o [1]
+SystemInit               0x800'4469  0x44  Code  Gb  system_stm32f4xx.o [1]
+UsageFault_Handler       0x800'4625   0x2  Code  Gb  stm32f4xx_it.o [1]
+__cmain                  0x800'463d        Code  Gb  cmain.o [4]
+__exit                   0x800'4679  0x14  Code  Gb  exit.o [5]
+__iar_copy_init3         0x800'458d  0x2e  Code  Gb  copy_init3.o [4]
+__iar_data_init3         0x800'45bd  0x28  Code  Gb  data_init.o [4]
+__iar_init_vfp           0x800'45e5        Code  Gb  fpinit_M.o [3]
+__iar_program_start      0x800'469d        Code  Gb  cstartup_M.o [4]
+__low_level_init         0x800'465b   0x4  Code  Gb  low_level_init.o [2]
+__vector_table           0x800'4000        Data  Gb  startup_stm32f427x.o [1]
+_call_main               0x800'4649        Code  Gb  cmain.o [4]
+_exit                    0x800'466d        Code  Gb  cexit.o [4]
+_main                    0x800'4657        Code  Gb  cmain.o [4]
+exit                     0x800'4667   0x4  Code  Gb  exit.o [2]
+g_nSysDelay             0x2000'0008   0x4  Data  Gb  AnyID_R542_SysTick_HL.o [1]
+g_nSysState             0x2000'0000   0x4  Data  Gb  AnyID_R542_SysCfg.o [1]
+g_nSysTick              0x2000'0004   0x4  Data  Gb  AnyID_R542_SysTick_HL.o [1]
+main                     0x800'465f   0x8  Code  Gb  main.o [1]
+
+
+[1] = E:\AnyID\Git\ESC_SSC\ESC_SSC\ESC_SSC\Build\Obj
+[2] = dl7M_tlf.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+   2'038 bytes of readonly  code memory
+      34 bytes of readonly  data memory
+  16'396 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
